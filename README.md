@@ -1,40 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/create-next-app).
-
 ## Getting Started
 
-First, run the development server:
+### 1. Clone the Repository
 
-```bash
+```sh
+git clone https://github.com/your-username/inksesh.git
+cd inksesh
+
+2. Install Dependencies
+npm install
+
+3. Set Up Environment Variables
+Create a .env.local file in the root directory and add:
+
+DATABASE_URL=your_neon_postgres_connection_string
+NEXT_PUBLIC_BASE_URL=http://localhost:3000
+NODE_ENV='development'
+
+(Replace DATABASE_URL with your Neon Postgres connection string.)
+
+4. Seed the Database (Optional)
+If you want sample data, run:
+
+npx tsx [seed.ts](http://_vscodecontentref_/0)
+
+5. Run the Development Server
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visit http://localhost:3000 in your browser.
 
-You can start editing the page by modifying `app/route.ts`. The page auto-updates as you edit the file.
+Deployment (Vercel Recommended)
+Push your code to a public GitHub repository.
+Go to vercel.com, sign in with GitHub, and import your repo.
+Add your environment variables (DATABASE_URL, NEXT_PUBLIC_BASE_URL) in the Vercel dashboard.
+Click “Deploy”.
+Your app will be live at https://your-project.vercel.app.
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Running Tests
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+:> npm run test
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Tech Stack
+Next.js (App Router)
+Neon Postgres (DB)
+Tailwind CSS
+Vercel (Deployment)
+Jest + React Testing Library (Testing)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Contact
+For any questions, open an issue or email me on mtanujchoudhary@gmail.com
 
-## API Routes
-
-This directory contains example API routes for the headless API app.
-
-For more details, see [route.js file convention](https://nextjs.org/docs/app/api-reference/file-conventions/route).

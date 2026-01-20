@@ -3,6 +3,7 @@
 import { useState, useCallback, useEffect } from 'react';
 import { fetchArtistById, fetchBookingsByArtistId } from '@/utils/api';
 import Image from 'next/image';
+import React from 'react';
 import { useParams } from 'next/navigation';
 function BookingList({ bookings }: { bookings: any[] }) {
   return (

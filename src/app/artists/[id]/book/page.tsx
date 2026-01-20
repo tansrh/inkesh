@@ -4,6 +4,7 @@
 import { useRef, useState } from 'react';
 import { useParams, useRouter } from 'next/navigation';
 import { createBooking } from '@/utils/api';
+import React from 'react';
 export default function BookingFormPage() {
   const params = useParams();
   const artistId = params.id as string;

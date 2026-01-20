@@ -5,6 +5,8 @@ import { fetchArtistById, fetchBookingsByArtistId } from '@/utils/api';
 import Image from 'next/image';
 import React from 'react';
 import { useParams } from 'next/navigation';
+import Link from 'next/link';
+
 function BookingList({ bookings }: { bookings: any[] }) {
   return (
     <section className="mt-8">
@@ -52,18 +54,16 @@ export default function ArtistProfilePage() {
     return <div className="p-8">Artist not found.</div>;
   }
   return (
-    <main className="max-w-2xl mx-auto py-8 px-4 border-l-4 border-black-600 min-h-screen">
+    <main className="max-w-3xl mx-auto py-8 px-4 border-l-4 border-black-600 min-h-screen border-r-4">
       <h1 className="text-2xl font-bold mb-4">{artist.name}</h1>
       <p className="mb-4 text-gray-600">{artist.bio}</p>
-      <div className="grid grid-cols-2 gap-4 mb-6 max-[450px]:grid-cols-1">
-        {/*
-        {artist.portfolio.map((img: string, idx: number) => (
-          <Image key={idx} src={img} alt={artist.name} width={240} height={240} className="rounded object-cover" />
+      <div className="flex flex-row gap-4 mb-6">
+        {/* Render all 5 static images from /public/images */}
+        {['/images/1.jpg','/images/2.jpg','/images/3.jpg','/images/4.jpg','/images/5.jpg'].map((img, idx) => (
+          <Image key={idx} src={img} alt={artist.name} width={140} height={140} className="rounded object-cover" />
         ))}
-        */}
-        {/* TODO: Render all 5 static images from /public/images for this artist */}
       </div>
-      <a href={`/artists/${artist.id}/book`} className="inline-block bg-black text-white px-4 py-2 rounded hover:bg-gray-200 hover:text-black mb-8">Book Now</a>
+      <Link href={`/artists/${artist.id}/book`} className="inline-block bg-black text-white px-4 py-2 rounded hover:bg-gray-200 hover:text-black mb-8">Book Now</Link>
       <BookingList bookings={bookings} />
     </main>
   );

@@ -85,7 +85,7 @@ Shortcuts Taken and Why
 No advanced authentication or user accounts, as the brief allowed for minimal auth.
 No image upload feature; static images were used for speed and simplicity.
 No admin dashboard or booking management UI, to focus on the main user flow.
-Minimal test coverage and no CI/CD pipeline, to maximize time spent on core features and polish.
+Minimal test coverage to maximize time spent on core features and polish.
 ```
 
 

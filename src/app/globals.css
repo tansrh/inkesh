@@ -1,0 +1,8 @@
+/* Global responsive typography classes */
+.responsive-heading {
+	@apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold;
+}
+.responsive-card-title {
+	@apply text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold;
+}
+@import "tailwindcss";

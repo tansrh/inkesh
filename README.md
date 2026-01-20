@@ -69,6 +69,7 @@ Static images: Used for artist portfolios to ensure fast, reliable, and optimize
 Minimal auth: Only a contact field is required, reducing friction for users and speeding up development.
 Focus on core flows: Prioritized a working discovery → profile → booking flow over edge-case completeness or admin features.
 Testing: Added basic Jest/RTL tests for key components, but kept coverage minimal to stay within the timebox.
+Form: Used uncontrolled components (via refs) for the booking form to minimize unnecessary rerenders and keep the code simple and performant.
 ```
 
 

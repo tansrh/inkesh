@@ -33,7 +33,7 @@ export default function BookingFormPage() {
         if (contactRef.current) contactRef.current.value = '';
         if (dateRef.current) dateRef.current.value = '';
         if (messageRef.current) messageRef.current.value = '';
-        router.push('/');
+        setTimeout(() => router.push('/'), 1500);
       }
     } catch {
       setStatus('error');

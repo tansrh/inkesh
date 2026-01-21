@@ -57,7 +57,7 @@ export default function ArtistProfilePage() {
     <main className="max-w-3xl mx-auto py-8 px-4 border-l-4 border-black-600 min-h-screen border-r-4">
       <h1 className="text-2xl font-bold mb-4">{artist.name}</h1>
       <p className="mb-4 text-gray-600">{artist.bio}</p>
-      <div className="flex flex-row gap-4 mb-6">
+      <div className="flex flex-row flex-wrap gap-4 mb-6 w-full h-auto">
         {/* Render all 5 static images from /public/images */}
         {['/images/1.jpg','/images/2.jpg','/images/3.jpg','/images/4.jpg','/images/5.jpg'].map((img, idx) => (
           <Image key={idx} src={img} alt={artist.name} width={140} height={140} className="rounded object-cover" />
